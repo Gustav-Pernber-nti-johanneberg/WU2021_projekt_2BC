@@ -5,6 +5,211 @@
     letter-spacing: 2px;
 }
 
+
+
+
+/*Desktop*/
+@media screen and (min-width: 767px){
+
+
+
+#storeInfoWrapper{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    'hd hd'
+    'ho ho'
+    'hi hi'
+    'fo fo'
+    ;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 80px 110vh 100vh 100px;
+    min-width: auto;
+  
+}
+
+
+#hours{
+    
+    grid-area:ho ;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    'ti ti'
+    'on of'
+    ;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 250px auto;
+    min-width: auto;
+    background-image: url(../img/kuling_white.jpg);
+    background-attachment: fixed;
+    background-position: 0 20%;
+    
+    
+}
+
+.hours_content{
+    padding-top: 70px;
+    
+}
+
+#hours_title{
+    margin-bottom: 40px;
+    font-size: 55px;
+
+
+}
+
+
+
+#hours_title_container{
+    grid-area:ti ;
+
+
+}
+
+#hours_season{
+    grid-area: on;
+
+
+}
+
+#hours__off_season{
+    grid-area: of;
+    
+
+}
+
+.hours_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.content_title{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+    color: #181818;
+
+}
+
+.content_title > h2{
+    margin-bottom: 10px;
+    
+
+}
+
+.content_title > h4{
+    margin-bottom: 10px;
+    font-size: 20px;
+
+}
+
+.hours_days_wrapper{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #181818;
+
+
+}
+
+.weekdays{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.weekend{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.hours_hours{
+    padding: 20px;
+    
+    font-size: 35px;
+}
+
+.days{
+    margin-right: 5vw ;
+    padding: 20px;
+    margin-bottom: 10px;
+
+}
+
+.days > h4{
+    font-size: 35px;
+    
+    
+
+}
+
+
+#hours_red_border{
+    height: 30px;
+    position: absolute;
+    bottom: -20%;
+    background-color: rgb(180, 56, 34);
+    width: 100%;
+    z-index: 2;
+}
+
+
+#hitta_hit{
+    grid-area: hi ;
+    background-image: url(../img/kuling_white.jpg);
+    background-attachment: fixed;
+    background-position: 0 60%;
+
+}
+
+
+#hitta_hit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hitta_hit_title{
+    margin-bottom: 50px;
+
+}
+
+.map_desktop{
+
+    border: 10px solid #09814A;
+    border-radius: 0px;
+    margin: 0;
+    background-color:#09814A ;
+}
+
+.map_mobile{
+    display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
 #index_wrapper{
 
     display: grid;
@@ -22,9 +227,14 @@
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 80px 130vh 20px 150vh 20px 100vh 100px;
+    min-width: auto;
+    
 }
 
+.mobile_nav{
+    display: none;
 
+}
 
 header{
 
@@ -39,6 +249,7 @@ header{
     align-items: center;
     justify-content: flex-start;
     background-color: #181818 ;
+    z-index: 10;
    
 }
 
@@ -55,7 +266,7 @@ header{
 
 }
 
-#header_logo_img{
+#header_logo_img_full{
     
     padding-left: 15px;
     max-height: 60px;
@@ -64,8 +275,19 @@ header{
    /* border-bottom-right-radius: 15px;*/
 
 }
+#header_logo_img_small{
+    display: none;
 
+}
 
+#scroll_to{
+
+    
+    padding: 20px;
+    position: absolute;
+    top: 2400px;
+    
+    }
 
 nav{
     position: fixed;
@@ -73,6 +295,7 @@ nav{
     left: 0;
     margin-left: 400px;
     margin-right: 400px;
+    padding-left: 60px ;
     
     
 }
@@ -89,13 +312,10 @@ nav{
 
 }
 
-.nav_list_item{
-    margin-left: 100px;
-    margin-right: 100px;
-    
-    list-style: none;
-}
 
+#mobile_nav_btn_img{
+    display: none;
+}
 .nav_list_link{
     display: flex;
     flex-direction: column;
@@ -106,6 +326,11 @@ nav{
 
     padding: 10px;
     
+
+}
+
+.nav_list_link:hover{
+    color: #aca8a1; ;
 
 }
 
@@ -123,19 +348,101 @@ nav{
 }
 
 
+
+@media screen and (min-width: 1600px){
+
+    #welcome_title > *{
+        font-weight: 900;
+        font-family: 'Bebas Neue';
+        letter-spacing: 5px;
+        font-size:150px ;
+        
+        
+    }
+
+    .nav_list_item{
+        margin-left: 100px;
+        margin-right: 100px;
+        
+        list-style: none;
+    }
+
+    nav{
+        position: fixed;
+        right: 0;
+        left: 0;
+        margin-left: 400px;
+        margin-right: 400px;
+        
+        
+    }
+
+}
+@media screen and (max-width: 1600px){
+    #welcome_title > *{
+        font-weight: 900;
+        font-family: 'Bebas Neue';
+        letter-spacing: 5px;
+        font-size:90px ;
+        
+        
+    }
+
+    .nav_list_item{
+        margin-left: 100px;
+        margin-right: 100px;
+        
+        list-style: none;
+    }
+
+    nav{
+        position: fixed;
+        right: 0;
+        left: 0;
+        margin-left: 400px;
+        margin-right: 400px;
+       
+        
+        
+    }
+}
+
+@media screen and (max-width: 1100px){
+    #welcome_title > *{
+        font-weight: 900;
+        font-family: 'Bebas Neue';
+        letter-spacing: 5px;
+        font-size:60px ;  
+    }
+
+
+
+    .nav_list_item{
+        margin-left: 20px;
+        margin-right: 20px;
+        
+        list-style: none;
+    }
+
+    nav{
+        position: fixed;
+        right: 0;
+        left: 0;
+        margin-left: 400px;
+        margin-right: 400px;
+        padding-left: 60px ;
+        
+        
+    }
+
+}
+
 #welcome_title{
     margin-top: 200px;
     color: #FFFAF1;
 }
 
-#welcome_title > *{
-    font-weight: 900;
-    font-family: 'Bebas Neue';
-    letter-spacing: 5px;
-    font-size:150px ;
-    
-    
-}
+
 
 #welcome_content{
     display: flex;
@@ -169,29 +476,46 @@ nav{
    font-family: 'Montserrat', sans-serif;
     
 }
- 
 
 
 #more_info_btn{
+    transition: opacity 0.3s;
     background-color: #09814A;
     width: 200px;
     height: 60px;
     border-radius: 30px;
     margin-top: 7%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
+    bottom: 5%;
+    position: fixed;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -100px;
+    cursor:pointer;
+
+    
+
 }
 
+#more_info_btn:hover{
+
+    background-color: #075a35;
+
+
+}
+
+.invisible{
+    opacity: 0;
+    transition: opacity 0.3s;
+    
+}
 
 #more_info_text{
     color: #181818;
     font-size: 17px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    top: 30%;
+    position: absolute;
+    left: 15%;
 }
 
 .black_border{
@@ -292,6 +616,11 @@ grid-area: ti;
     color: #0d6d42;
 }
 
+#ombud_text_link:hover{
+
+    color: #0b4229;
+}
+
 .info_logo{
 
     display: flex;
@@ -302,9 +631,20 @@ grid-area: ti;
 
 }
 
+#info_store_logo{
+
+    grid-area: ls;
+}
+
 #info_store_logo > img{
     max-height: 60px;
-    
+
+}
+
+#info_island_logo{
+
+    grid-area: li;
+
 }
 
 #info_island_logo > a > img{
@@ -418,3 +758,761 @@ footer{
     margin-right: 15px;
 
 }
+
+}
+
+/*Mobile*/
+@media screen and (max-width: 767px){
+
+    #storeInfoWrapper{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        'hd hd'
+        'ho ho'
+        'hi hi'
+        'fo fo'
+        ;
+    
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px 150vh 100vh 100px;
+        min-width: auto;
+      
+    }
+    
+    
+    #hours{
+        
+        grid-area:ho ;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: 
+        'ti'
+        'on'
+        'of'
+        ;
+    
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 250px auto;
+        min-width: auto;
+        background-image: url(../img/kuling_white.jpg);
+        background-attachment: fixed;
+        background-position: 0 20%;
+        
+        
+    }
+    
+    .hours_content{
+        padding-top: 70px;
+        
+    }
+    
+    #hours_title{
+        margin-bottom: 40px;
+        font-size: 70px;
+    
+    
+    }
+    
+    
+    
+    #hours_title_container{
+        grid-area:ti ;
+    
+    
+    }
+    
+    #hours_season{
+        grid-area: on;
+    
+    
+    }
+    
+    #hours__off_season{
+        grid-area: of;
+        margin-top: -50px;
+    
+    }
+    
+    .hours_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -700px;
+    
+    }
+    .content_title{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        margin-bottom: 50px;
+        color: #181818;
+    
+    }
+    
+    .content_title > h2{
+        margin-bottom: 10px;
+        
+    
+    }
+    
+    .content_title > h4{
+        margin-bottom: 10px;
+        font-size: 20px;
+    
+    }
+    
+    .hours_days_wrapper{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #181818;
+        
+    
+    }
+    
+    .weekdays{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .weekend{
+        display: flex;
+        flex-direction: row;
+      
+    }
+    
+    .hours_hours{
+        padding: 20px;
+        
+        font-size: 35px;
+    }
+    
+    .days{
+        margin-right: 5vw ;
+        padding: 20px;
+        margin-bottom: 10px;
+    
+    }
+    
+    .days > h4{
+        font-size: 35px;
+        
+        
+    
+    }
+    
+    
+    #hours_red_border{
+        height: 30px;
+        position: absolute;
+        bottom: -63%;
+        background-color: rgb(180, 56, 34);
+        width: 100%;
+        z-index: 2;
+    }
+    
+    
+    #hitta_hit{
+        grid-area: hi ;
+        background-image: url(../img/kuling_white.jpg);
+        background-attachment: fixed;
+        background-position: 0 60%;
+    
+    }
+    
+    
+    #hitta_hit{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #hitta_hit_title{
+        margin-bottom: 50px;
+    
+    }
+    
+    .map_desktop{
+    
+        border: 10px solid #09814A;
+        border-radius: 0px;
+        margin: 0;
+        background-color:#09814A ;
+        display:none;
+    }
+
+    .map_mobile{
+        border: 10px solid #09814A;
+        border-radius: 0px;
+        margin: 0;
+        background-color:#09814A ; 
+    }
+
+
+
+
+#index_wrapper{
+
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 
+    'hd'
+    'we'
+    'bb'
+    'oo'
+    'rb'
+    'ko'
+    'fo'
+    ;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 130vh 20px 200vh 20px auto 100px;
+    
+    background-color: red;
+}
+
+
+
+header{
+
+    grid-area: hd;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #181818 ;
+    z-index: 3;
+}
+
+
+#header_logo_link{
+    
+    text-decoration: none;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    
+
+}
+
+#header_logo_img_full{
+    padding-left: 15px;
+    max-height: 60px;
+    display: none;
+    
+
+    /* border-bottom-right-radius: 15px;*/
+
+}
+
+#header_logo_img_small{
+    max-height: 60px;
+    padding-left: 20px;
+
+}
+
+
+#index_nav{
+    display: none;
+    
+}
+
+#mobile_nav > img{
+    max-height: 100px;
+    position: fixed;
+    
+
+
+}
+
+.mobile_nav{
+    background-color: #181818;
+    
+    height: 100%;
+    width: 80vw;
+    position: fixed;
+    top: 0;
+    right: -140vw;
+    transition: right 0.3s;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+}
+
+.menu_show{
+    
+    right: 0;
+}
+
+
+#mobile_nav_btn_wrapper{
+    position: absolute;
+    right: 10px;
+    top: -15px;
+    transition: 0.5s;
+    cursor:pointer;
+}
+
+#scroll_to{
+
+
+padding: 20px;
+position: absolute;
+top: 2250px;
+
+}
+
+#mobile_nav_btn_img{
+    max-height: 130px ;
+}
+
+
+.button_rotate{
+    transform: rotate(90deg);
+    transition: 0.5s;
+
+
+}
+
+
+.nav_list{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    
+
+}
+
+
+
+.nav_list_link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 3px solid #FFFAF1 ;
+    text-decoration: none;
+    color: #FFFAF1;   
+
+    padding: 10px;
+    margin: 70px;
+
+    
+
+}
+
+
+.nav_list_link:hover{
+  
+    text-decoration: none;
+    color: #a09d96;   
+    border-bottom: 3px solid #a09d96;
+
+    
+
+}
+
+
+.nav_list_link > *{
+    font-size: 50px;
+
+}
+
+
+.first_section{
+    grid-area: we;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+    background-image: url(../img/tomater_helbild2.jpg);
+    background-position: 50% 80%;
+    background-size: 150%;
+    width: 100%;
+
+}
+
+
+
+
+
+@media screen and (max-width: 1100px){
+    #welcome_title > *{
+        font-weight: 900;
+        font-family: 'Bebas Neue';
+        letter-spacing: 5px;
+        font-size:60px ;  
+        text-align: center;
+    }
+
+
+
+    .nav_list_item{
+    
+        
+        list-style: none;
+    }
+
+    nav{
+        position: fixed;
+        right: 0;
+        left: 0;
+        margin-left: 400px;
+        margin-right: 400px;
+        padding-left: 60px ;
+        
+        
+    }
+
+}
+
+#welcome_title{
+    margin-top: 200px;
+    color: #FFFAF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+
+#welcome_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFAF1;
+
+
+}
+
+#welcome_content > div > *{
+    font-family: 'Bebas Neue';
+
+}
+
+
+
+#welcome_text_1{
+    font-size: 90px;
+    margin-top: 20%;
+    
+}
+
+#welcome_text_2 {
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+#welcome_text_2 > h3{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+#more_info_btn{
+    transition: opacity 0.3s;
+    background-color: #09814A;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 7%;
+    bottom: 5%;
+    position: fixed;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -100px;
+    cursor:pointer;
+
+    
+
+}
+
+#more_info_btn:hover{
+
+    background-color: #075a35;
+
+
+}
+
+.invisible{
+    opacity: 0;
+    transition: opacity 0.3s;
+    
+}
+
+#more_info_text{
+    color: #181818;
+    font-size: 17px;
+    display: flex;
+    top: 30%;
+    position: absolute;
+    left: 15%;
+}
+
+.black_border{
+    grid-area: bb;
+    background-color: #181818;
+}
+
+
+
+
+
+
+
+#om_oss_wrapper{
+    grid-area: oo;
+    background-color: #FFFAF1;
+    display: grid;
+    grid-template-areas: 
+    'ti'
+    'co'
+    ;
+    
+    grid-template-rows: 300px auto;
+    grid-template-columns: 100%;
+
+    
+    
+
+}
+
+.section_title{
+    color: #181818;
+    font-size: 70px;
+    
+}
+
+.section_title_container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+#om_oss_title_container{
+grid-area: ti;
+}
+
+#om_oss_content{
+    grid-area: co;
+    display: grid;
+    grid-template-areas:
+    'st'
+    'is'
+    ;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 500px;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#store_info{
+    grid-area: st;
+    margin-bottom: 350px;
+}
+#island_info{
+    grid-area: is;
+    
+}
+
+.info_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right:60px;
+    margin-left:60px;
+    
+}
+
+
+.info_text > h2{
+
+    font-size: 30px;
+    margin-bottom: 30px;
+
+}
+
+.info_text > p{
+    font-size: 23px;
+    line-height: 35px;
+    font-weight: 500;
+}
+
+#ombud_text_link{
+    font-weight: 800;
+    text-decoration: none;
+    color: #0d6d42;
+}
+
+#ombud_text_link:hover{
+
+    color: #0b4229;
+}
+
+.info_logo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+
+}
+
+#info_store_logo > img{
+    max-height: 60px;
+    position: relative;
+    bottom: 700px;
+    
+}
+
+#info_island_logo > a > img{
+    max-height: 120px;
+    position: relative;
+    bottom: 150px;
+}
+
+.red_border{
+    background-color: rgb(180, 56, 34);
+    grid-area: rb;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#kontakt{
+    grid-area: ko;
+    background-color: #181818;
+
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-areas: 
+    'ti'
+    'ma'
+    'te'
+    ;
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 500px 400px 400px;
+
+}
+
+
+#kontakt_title_container{
+    grid-area: ti;
+    top: 0;
+
+}
+
+#kontakt_title{
+    color: #FFFAF1;
+    margin-bottom: 220px;
+}
+
+
+#kontakt_mail{
+    grid-area: ma;
+    
+}
+
+#kontakt_mail > h2{
+    font-size: 70px;
+    color: #FFFAF1;
+}
+
+#kontakt_mail > a{
+    font-size: 30px;
+    text-decoration: none;
+    color: #09814A;
+}
+
+#kontakt_telefon {
+    grid-area: te;
+    
+}
+
+#kontakt_telefon > h2 {
+    font-size: 70px;
+    color: #FFFAF1;
+
+}
+
+#kontakt_telefon > p{
+    font-size: 30px;
+    color: #09814A;
+}
+
+footer{
+    grid-area: fo;
+    background-color: rgb(180, 56, 34);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_logo {
+    max-height: 70px;
+    margin-left: 20px;
+}
+
+.footer_fbLogo{
+    max-height: 70px;
+    margin-right: 15px;
+
+}
+
+}
+
