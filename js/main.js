@@ -8,7 +8,7 @@ var prevScrollpos = window.pageYOffset;
 function hideMoreInfoBtn() {
   var currentScrollPos = window.pageYOffset;
 
-  if (prevScrollpos > currentScrollPos && window.pageYOffset < 200){
+  if (prevScrollpos > currentScrollPos && window.pageYOffset < 50){
     let title  = document.querySelector("#more_info_btn")
     title.classList.remove("invisible")
    
