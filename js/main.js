@@ -19,12 +19,10 @@ function hideMoreInfoBtn() {
   prevScrollpos = currentScrollPos;
 }
 
-
 function rotateMenuBtn(){
   document.querySelector("#mobile_nav_btn_wrapper").classList.toggle("button_rotate")
 
 }
-
 
 function showMenu(){
   document.querySelector(".mobile_nav").classList.toggle("menu_show")
